@@ -17,19 +17,20 @@ namespace PruebaTecnicaBackend2023FrancoBuonfrate.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Cliente> GetList()
+        public async Task<IEnumerable<Cliente>> GetList()
         {
-            return _service.GetList();
+            return await _service.GetList();
         }
 
         [HttpGet("{dni}")]
-        public ActionResult<Cliente> GetByDni(long dni)
+        public async Task<ActionResult<Cliente>> GetByDni(long dni)
         {
-            var cliente = _service.GetByDni(dni);
+            var cliente = await _service.GetByDni(dni);
             if(cliente is null)
                 return NotFound();
             return Ok(cliente);
         }
 
+        
     }
 }

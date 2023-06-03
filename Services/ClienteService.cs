@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using PruebaTecnicaBackend2023FrancoBuonfrate.Data;
 using PruebaTecnicaBackend2023FrancoBuonfrate.Data.ClienteModels;
 
@@ -13,16 +14,17 @@ namespace PruebaTecnicaBackend2023FrancoBuonfrate.Services
             _context = context;
         }
 
-        public IEnumerable<Cliente> GetList()
+        public async Task<IEnumerable<Cliente>> GetList()
         {
-            return _context.Clientes.ToList();
+            return await _context.Clientes.ToListAsync();
         }
 
-        public Cliente? GetByDni(long dni)
+        public async Task<Cliente?> GetByDni(long dni)
         {
-            return _context.Clientes.FirstOrDefault(cli => cli.Dni == dni);
+            return await _context.Clientes.FirstOrDefaultAsync(cli => cli.Dni == dni);
 
         }
 
+        
     }
 }

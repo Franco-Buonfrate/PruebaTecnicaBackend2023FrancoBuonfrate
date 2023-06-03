@@ -7,9 +7,9 @@ namespace PruebaTecnicaBackend2023FrancoBuonfrate.Services
 {
     public class ClienteService
     {
-        private readonly ClientesContext _context;
+        private readonly Context _context;
 
-        public ClienteService(ClientesContext context)
+        public ClienteService(Context context)
         {
             _context = context;
         }

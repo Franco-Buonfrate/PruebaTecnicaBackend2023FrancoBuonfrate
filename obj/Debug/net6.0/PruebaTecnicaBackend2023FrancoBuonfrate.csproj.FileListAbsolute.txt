@@ -134,3 +134,4 @@ C:\Users\Franco\Desktop\prueba tecnica github\PruebaTecnicaBackend2023FrancoBuon
 C:\Users\Franco\Desktop\prueba tecnica github\PruebaTecnicaBackend2023FrancoBuonfrate\obj\Debug\net6.0\PruebaTecnicaBackend2023FrancoBuonfrate.pdb
 C:\Users\Franco\Desktop\prueba tecnica github\PruebaTecnicaBackend2023FrancoBuonfrate\obj\Debug\net6.0\PruebaTecnicaBackend2023FrancoBuonfrate.genruntimeconfig.cache
 C:\Users\Franco\Desktop\prueba tecnica github\PruebaTecnicaBackend2023FrancoBuonfrate\obj\Debug\net6.0\ref\PruebaTecnicaBackend2023FrancoBuonfrate.dll
+C:\Users\Franco\Desktop\prueba tecnica github\PruebaTecnicaBackend2023FrancoBuonfrate\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

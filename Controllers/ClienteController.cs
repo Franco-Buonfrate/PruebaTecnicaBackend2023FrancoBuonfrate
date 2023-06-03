@@ -1,13 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PruebaTecnicaBackend2023FrancoBuonfrate.Data;
 using PruebaTecnicaBackend2023FrancoBuonfrate.Data.ClienteModels;
 using PruebaTecnicaBackend2023FrancoBuonfrate.Services;
 
 namespace PruebaTecnicaBackend2023FrancoBuonfrate.Controllers
 {
+    [Authorize]
     [ApiController]
-    [Route("[controller]")]
-    public class ClienteController : Controller
+    [Route("api/[controller]")]
+    public class ClienteController : ControllerBase
     {
         private readonly ClienteService _service;
 
@@ -16,13 +18,13 @@ namespace PruebaTecnicaBackend2023FrancoBuonfrate.Controllers
             _service = service;
         }
 
-        [HttpGet]
+        [HttpGet("listar")]
         public async Task<IEnumerable<Cliente>> GetList()
         {
             return await _service.GetList();
         }
 
-        [HttpGet("{dni}")]
+        [HttpGet("listarPorDni/{dni}")]
         public async Task<ActionResult<Cliente>> GetByDni(long dni)
         {
             var cliente = await _service.GetByDni(dni);

@@ -7,7 +7,6 @@ namespace PruebaTecnicaBackend2023FrancoBuonfrate.Data.ClienteModels
 {
     public partial class Cliente
     {
-        [JsonIgnore]
         public int Id { get; set; }
 
         [MaxLength(100, ErrorMessage = "El nombre no puede superar los 100 carateres")]

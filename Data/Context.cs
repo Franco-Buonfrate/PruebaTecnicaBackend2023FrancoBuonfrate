@@ -6,13 +6,13 @@ using PruebaTecnicaBackend2023FrancoBuonfrate.Data.ClienteModels;
 
 namespace PruebaTecnicaBackend2023FrancoBuonfrate.Data
 {
-    public partial class ClientesContext : DbContext
+    public partial class Context : DbContext
     {
-        public ClientesContext()
+        public Context()
         {
         }
 
-        public ClientesContext(DbContextOptions<ClientesContext> options)
+        public Context(DbContextOptions<Context> options)
             : base(options)
         {
         }

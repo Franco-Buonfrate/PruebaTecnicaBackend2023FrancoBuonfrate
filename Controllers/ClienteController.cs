@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PruebaTecnicaBackend2023FrancoBuonfrate.Data;
 using PruebaTecnicaBackend2023FrancoBuonfrate.Data.ClienteModels;
+using PruebaTecnicaBackend2023FrancoBuonfrate.Services;
 
 namespace PruebaTecnicaBackend2023FrancoBuonfrate.Controllers
 {
@@ -8,26 +9,27 @@ namespace PruebaTecnicaBackend2023FrancoBuonfrate.Controllers
     [Route("[controller]")]
     public class ClienteController : Controller
     {
-        private readonly ClientesContext _context;
+        private readonly ClienteService _service;
 
-        public ClienteController(ClientesContext context)
+        public ClienteController(ClienteService service)
         {
-            _context = context;
+            _service = service;
         }
 
         [HttpGet]
         public IEnumerable<Cliente> GetList()
         {
-            return _context.Clientes.ToList();
+            return _service.GetList();
         }
 
         [HttpGet("{dni}")]
         public ActionResult<Cliente> GetByDni(long dni)
         {
-            var cliente = _context.Clientes.FirstOrDefault(cli => cli.Dni == dni);
+            var cliente = _service.GetByDni(dni);
             if(cliente is null)
                 return NotFound();
             return Ok(cliente);
         }
+
     }
 }

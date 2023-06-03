@@ -1,4 +1,5 @@
 using PruebaTecnicaBackend2023FrancoBuonfrate.Data;
+using PruebaTecnicaBackend2023FrancoBuonfrate.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +10,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//data base context
 builder.Services.AddSqlServer<ClientesContext>(builder.Configuration.GetConnectionString("Connection"));
+
+//Capa de servicios
+builder.Services.AddScoped<ClienteService>();
 
 var app = builder.Build();
 

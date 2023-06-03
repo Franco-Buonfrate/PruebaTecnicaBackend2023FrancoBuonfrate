@@ -2193,11 +2193,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Franco\\source\\repos\\PruebaTecnicaBackend2023FrancoBuonfrate\\PruebaTecnicaBackend2023FrancoBuonfrate.csproj",
+      "projectUniqueName": "C:\\Users\\Franco\\Desktop\\prueba tecnica github\\PruebaTecnicaBackend2023FrancoBuonfrate\\PruebaTecnicaBackend2023FrancoBuonfrate.csproj",
       "projectName": "PruebaTecnicaBackend2023FrancoBuonfrate",
-      "projectPath": "C:\\Users\\Franco\\source\\repos\\PruebaTecnicaBackend2023FrancoBuonfrate\\PruebaTecnicaBackend2023FrancoBuonfrate.csproj",
+      "projectPath": "C:\\Users\\Franco\\Desktop\\prueba tecnica github\\PruebaTecnicaBackend2023FrancoBuonfrate\\PruebaTecnicaBackend2023FrancoBuonfrate.csproj",
       "packagesPath": "C:\\Users\\Franco\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Franco\\source\\repos\\PruebaTecnicaBackend2023FrancoBuonfrate\\obj\\",
+      "outputPath": "C:\\Users\\Franco\\Desktop\\prueba tecnica github\\PruebaTecnicaBackend2023FrancoBuonfrate\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Franco\\AppData\\Roaming\\NuGet\\NuGet.Config",

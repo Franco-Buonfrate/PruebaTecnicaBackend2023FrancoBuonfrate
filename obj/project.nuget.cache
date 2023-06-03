@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SoxROSiJe2Qdgojp0SS8QyL/33c337LnhP8qKFkPLVk+XbyBT/75YrKFJwbjFouuthaVH7wHub36PVnmkZOFwA==",
+  "dgSpecHash": "StIVyDpTG7Qj5i5mLUQNHJF7vZVUIwcj2naFI2+6HwYG1RYrEiAYGDwdPafc36A9ab7ADCzPc/YXx+0C1hDWxg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Franco\\source\\repos\\PruebaTecnicaBackend2023FrancoBuonfrate\\PruebaTecnicaBackend2023FrancoBuonfrate.csproj",
+  "projectFilePath": "C:\\Users\\Franco\\Desktop\\prueba tecnica github\\PruebaTecnicaBackend2023FrancoBuonfrate\\PruebaTecnicaBackend2023FrancoBuonfrate.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Franco\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Franco\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

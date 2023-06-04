@@ -14,7 +14,7 @@ namespace PruebaTecnicaBackend2023FrancoBuonfrate.Controllers
     public class LoginController : ControllerBase
     {
         private readonly LoginService _loginService;
-        private IConfiguration config;
+        private readonly IConfiguration config;
 
         public LoginController(LoginService loginService, IConfiguration config)
         {
@@ -35,10 +35,7 @@ namespace PruebaTecnicaBackend2023FrancoBuonfrate.Controllers
 
             string token = GenerateToken(acceso);
 
-            return Ok(new
-            {
-                token = token
-            });
+            return Ok(token);
         }
 
         private string GenerateToken(UsuarioAcceso usuario)

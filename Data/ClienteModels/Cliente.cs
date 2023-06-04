@@ -21,8 +21,6 @@ namespace PruebaTecnicaBackend2023FrancoBuonfrate.Data.ClienteModels
         [RegularExpression(@"^[a-zA-Z\s]+$", ErrorMessage = "El campo apellido solo puede contener letras y espacios")]
         public string Apellido { get; set; } = null!;
 
-        //[DataType(DataType.Date)]
-        //[RegularExpression(@"^\d{4}-\d{2}-\d{2}$", ErrorMessage = "El formato de fecha debe ser yyyy-MM-dd")]
         [DefaultValue("2002-07-22")]
         public DateTime FechaNacimiento { get; set; }
 

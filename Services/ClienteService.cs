@@ -25,6 +25,12 @@ namespace PruebaTecnicaBackend2023FrancoBuonfrate.Services
 
         }
 
-        
+        public async Task<Cliente> Create(Cliente cliente)
+        {
+            _context.Clientes.Add(cliente);
+            await _context.SaveChangesAsync();
+
+            return cliente;
+        }
     }
 }

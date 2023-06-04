@@ -36,6 +36,14 @@ namespace PruebaTecnicaBackend2023FrancoBuonfrate.Controllers
             return cliente;
         }
 
-        
+        [HttpPost("agregar")]
+        public async Task<IActionResult> Create(Cliente cliente)
+        {
+            var newCliente = await _service.Create(cliente);
+
+            return CreatedAtAction(nameof(GetByDni), new { dni = newCliente.Dni }, newCliente);
+        }
+
+
     }
 }

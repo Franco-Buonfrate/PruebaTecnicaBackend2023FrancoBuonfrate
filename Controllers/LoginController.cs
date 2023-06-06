@@ -22,6 +22,11 @@ namespace PruebaTecnicaBackend2023FrancoBuonfrate.Controllers
             this.config = config;
         }
 
+        /// <summary>
+        /// Realiza la autenticación de un usuario.
+        /// </summary>
+        /// <param name="usuario">Los datos de acceso del usuario.</param>
+        /// <returns>El token de acceso generado si las credenciales son válidas.</returns>
         [HttpPost("autenticacion")]
         public async Task<IActionResult> Login (UsuarioAcceso usuario)
         {
@@ -38,12 +43,16 @@ namespace PruebaTecnicaBackend2023FrancoBuonfrate.Controllers
             return Ok(token);
         }
 
+        /// <summary>
+        /// Genera un token de acceso basado en el usuario proporcionado.
+        /// </summary>
+        /// <param name="usuario">El usuario para el cual se generará el token.</param>
+        /// <returns>El token de acceso generado.</returns>
         private string GenerateToken(UsuarioAcceso usuario)
         {
             var claims = new[]
             {
-                new Claim(ClaimTypes.Name, usuario.Usuario),
-                new Claim(ClaimTypes.NameIdentifier, usuario.Id.ToString())
+                new Claim(ClaimTypes.Name, usuario.Usuario)
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config.GetSection("Jwt:Key").Value));
